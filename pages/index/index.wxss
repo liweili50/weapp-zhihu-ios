@@ -1,0 +1,15 @@
+/**index.wxss**/
+
+.searchbar-result{
+    margin-top: 0;
+    font-size: 14px;
+}
+.searchbar-result:before{
+    display: none;
+}
+.weui-search-bar {
+  width: 100%;
+}
+.swiper-wrap {
+  margin-top: 60px;
+}

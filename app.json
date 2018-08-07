@@ -1,0 +1,52 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/idea/index",
+    "pages/market/index",
+    "pages/message/index",
+    "pages/more/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "知乎",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": true
+  },
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/c.png",
+        "selectedIconPath": "images/active_c.png"
+      },
+      {
+        "pagePath": "pages/idea/index",
+        "text": "想法",
+        "iconPath": "images/a.png",
+        "selectedIconPath": "images/active_a.png"
+      },
+      {
+        "pagePath": "pages/market/index",
+        "text": "市场",
+        "iconPath": "images/b.png",
+        "selectedIconPath": "images/active_b.png"
+      },
+      {
+        "pagePath": "pages/message/index",
+        "text": "消息",
+        "iconPath": "images/d.png",
+        "selectedIconPath": "images/active_d.png"
+      },
+      {
+        "pagePath": "pages/more/index",
+        "text": "更多",
+        "iconPath": "images/e.png",
+        "selectedIconPath": "images/active_e.png"
+      }
+    ]
+  }
+}

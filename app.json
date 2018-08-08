@@ -11,7 +11,6 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "知乎",
     "navigationBarTextStyle":"black",
-    "enablePullDownRefresh": true,
     "onReachBottomDistance": true
   },
   "tabBar": {

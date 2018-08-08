@@ -89,6 +89,12 @@ Page({
       hasUserInfo: true
     })
   },
+  upper: function (e) {
+    console.log(e)
+  },
+  lower: function (e) {
+    console.log(e)
+  },
   onShareAppMessage: function() {
     return {
       title: '微信',

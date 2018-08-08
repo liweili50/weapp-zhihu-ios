@@ -1,15 +1,75 @@
 /**index.wxss**/
-
+page{
+  width: 100%;
+  height: 100%;
+}
+.page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 .searchbar-result{
-    margin-top: 0;
-    font-size: 14px;
+  margin-top: 0;
+  font-size: 14px;
 }
 .searchbar-result:before{
-    display: none;
+  display: none;
 }
 .weui-search-bar {
   width: 100%;
 }
-.swiper-wrap {
-  margin-top: 60px;
+.weui-search-bar__form {
+   background-color: #d2d2d2;
+}
+.weui-search-bar__label{
+  background-color: #d2d2d2;
+}
+.weui-search-bar {
+  border-top: 0;
+}
+.weui-navbar__item{
+  padding: 8px 0;
+}
+.weui-navbar__item {
+  color: gray;
+}
+.weui-navbar__item.weui-bar__item_on {
+  color: #000;
+}
+.weui-navbar__slider {
+  background-color: #000;
+  height: 2px;
+}
+.weui-navbar {
+  background-color: #fff;
+}
+.weui-search-bar {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 11;
+}
+.weui-tab {
+  position: fixed;
+  top: 45px;
+  width: 100%;
+  height: 0;
+  z-index: 10;
+}
+swiper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.weui-media-box {
+  background-color: #fff;
+  margin-top: 10px;
+}
+swiper-item {
+  box-sizing: border-box;
+  padding-top: 86px;
+  overflow-y: auto;
+}
+.weui-panel__bd{
+  height: 100%;
 }

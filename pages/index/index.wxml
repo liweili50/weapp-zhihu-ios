@@ -15,6 +15,7 @@
         <view class="weui-search-bar__text">搜索</view>
       </label>
     </view>
+    <view class="weui-search-bar__cancel-btn" hidden="{{inputShowed}}">提问</view>
     <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
   </view>
   <!-- tab栏 -->
@@ -28,13 +29,49 @@
       <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
     </view>
   </view>
-  <view class='swiper-wrap'>
+  <!-- swiper -->
     <swiper indicator-dots="{{indicatorDots}}" bindchange="slideChange" current="{{currentIndex}}" autoplay="{{autoplay}}">
-      <block wx:for="{{imgUrls}}" wx:key="*this">
         <swiper-item>
-          <image src="{{item}}" class="slide-image" width="375" height="150" />
+          <scroll-view scroll-y class="weui-panel__bd">
+            1
+          </scroll-view>
         </swiper-item>
-      </block>
+        <swiper-item>
+          <scroll-view scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" upper-threshold="{{-40}}" class="weui-panel__bd">
+            <view class="weui-media-box weui-media-box_text">
+              <view class="weui-media-box__title weui-media-box__title_in-text">标题一</view>
+              <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+            </view>
+            <view class="weui-media-box weui-media-box_text">
+              <view class="weui-media-box__title weui-media-box__title_in-text">标题二</view>
+              <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。2wwbass a ssj  由各种物质组成的巨型球状天体</view>
+            </view>
+            <view class="weui-media-box weui-media-box_text">
+              <view class="weui-media-box__title weui-media-box__title_in-text">标题二</view>
+              <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+            </view>
+            <view class="weui-media-box weui-media-box_text">
+              <view class="weui-media-box__title weui-media-box__title_in-text">标题二</view>
+              <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+            </view>
+            <view class="weui-media-box weui-media-box_text">
+              <view class="weui-media-box__title weui-media-box__title_in-text">标题二</view>
+              <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+            </view>
+            <view class="weui-media-box weui-media-box_text">
+              <view class="weui-media-box__title weui-media-box__title_in-text">标题二</view>
+              <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+            </view>
+                        <view class="weui-media-box weui-media-box_text">
+              <view class="weui-media-box__title weui-media-box__title_in-text">标题9</view>
+              <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+            </view>
+          </scroll-view>
+        </swiper-item>
+        <swiper-item>
+          <scroll-view scroll-y class="weui-panel__bd">
+            3
+          </scroll-view>
+        </swiper-item>
     </swiper>
   </view>
-</view>

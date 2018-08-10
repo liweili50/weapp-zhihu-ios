@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
-const app = getApp()
+const app = getApp();
+const { getNewsList} = require('../../utils/api.js')
 Page({
   data: {
     inputShowed: false,
@@ -13,14 +14,12 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    imgUrls: [
-      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
-    ],
     indicatorDots: false,
     autoplay: false,
-    currentIndex: 1
+    currentIndex: 1,
+    recommendList: [],
+    loading: true,
+    down: false
   },
   onLoad: function() {
     var that = this;
@@ -34,7 +33,7 @@ Page({
         });
       }
     });
-
+    this.getRecommendList()
     // 获取用户信息
     if (app.globalData.userInfo) {
       this.setData({
@@ -91,9 +90,31 @@ Page({
   },
   upper: function (e) {
     console.log(e)
+    this.setData({
+      down: true
+    })
   },
   lower: function (e) {
     console.log(e)
+  },
+  scroll: function (e) {
+    console.log(e)
+    if (this.data.down && e.detail.scrollTop>=-60) {
+      this.setData({
+        down: false,
+        loading: true
+      })
+      this.getRecommendList()
+    }
+  },
+  getRecommendList() {
+    let that = this;
+    getNewsList().then(function(res) {
+      that.setData({
+        recommendList: res.data,
+        loading: false
+      })
+    })
   },
   onShareAppMessage: function() {
     return {

@@ -30,48 +30,34 @@
     </view>
   </view>
   <!-- swiper -->
-    <swiper indicator-dots="{{indicatorDots}}" bindchange="slideChange" current="{{currentIndex}}" autoplay="{{autoplay}}">
-        <swiper-item>
-          <scroll-view scroll-y class="weui-panel__bd">
-            1
-          </scroll-view>
-        </swiper-item>
-        <swiper-item>
-          <scroll-view scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" upper-threshold="{{-40}}" class="weui-panel__bd">
-            <view class="weui-media-box weui-media-box_text">
-              <view class="weui-media-box__title weui-media-box__title_in-text">标题一</view>
-              <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
-            </view>
-            <view class="weui-media-box weui-media-box_text">
-              <view class="weui-media-box__title weui-media-box__title_in-text">标题二</view>
-              <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。2wwbass a ssj  由各种物质组成的巨型球状天体</view>
-            </view>
-            <view class="weui-media-box weui-media-box_text">
-              <view class="weui-media-box__title weui-media-box__title_in-text">标题二</view>
-              <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
-            </view>
-            <view class="weui-media-box weui-media-box_text">
-              <view class="weui-media-box__title weui-media-box__title_in-text">标题二</view>
-              <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
-            </view>
-            <view class="weui-media-box weui-media-box_text">
-              <view class="weui-media-box__title weui-media-box__title_in-text">标题二</view>
-              <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
-            </view>
-            <view class="weui-media-box weui-media-box_text">
-              <view class="weui-media-box__title weui-media-box__title_in-text">标题二</view>
-              <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
-            </view>
-                        <view class="weui-media-box weui-media-box_text">
-              <view class="weui-media-box__title weui-media-box__title_in-text">标题9</view>
-              <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
-            </view>
-          </scroll-view>
-        </swiper-item>
-        <swiper-item>
-          <scroll-view scroll-y class="weui-panel__bd">
-            3
-          </scroll-view>
-        </swiper-item>
-    </swiper>
-  </view>
+  <swiper indicator-dots="{{indicatorDots}}" bindchange="slideChange" current="{{currentIndex}}" autoplay="{{autoplay}}">
+    <swiper-item>
+      <scroll-view scroll-y class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_text" wx:for="{{recommendList}}" wx:key="*this">
+          <view class="weui-media-box__title weui-media-box__title_in-text">{{item.title}}</view>
+          <view class="weui-media-box__desc">{{item.content}}</view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" upper-threshold="{{-60}}" bindscroll="scroll" class="weui-panel__bd">
+        <view class="{{loading ? 'weui-loadmore':'weui-loadmore weui-loadmore-end'}}">
+          <view class="weui-loading"></view>
+          <!-- <view class="weui-loadmore__tips">正在加载</view> -->
+        </view>
+        <view class="weui-media-box weui-media-box_text" wx:for="{{recommendList}}" wx:key="*this">
+          <view class="weui-media-box__title weui-media-box__title_in-text">{{item.title}}</view>
+          <view class="weui-media-box__desc">{{item.content}}</view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_text" wx:for="{{recommendList}}" wx:key="*this">
+          <view class="weui-media-box__title weui-media-box__title_in-text">{{item.title}}</view>
+          <view class="weui-media-box__desc">{{item.content}}</view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

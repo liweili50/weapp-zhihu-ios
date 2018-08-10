@@ -14,7 +14,7 @@
     "onReachBottomDistance": true
   },
   "tabBar": {
-    "selectedColor": "#1296db",
+    "selectedColor": "#3683F4",
     "list": [
       {
         "pagePath": "pages/index/index",

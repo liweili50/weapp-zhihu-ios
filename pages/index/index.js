@@ -19,7 +19,8 @@ Page({
     currentIndex: 1,
     recommendList: [],
     loading: true,
-    down: false
+    down: false,
+    loadingMore: false
   },
   onLoad: function() {
     var that = this;
@@ -95,6 +96,18 @@ Page({
     })
   },
   lower: function (e) {
+    this.setData({
+      loadingMore: true
+    })
+    let that = this;
+    getNewsList().then(function (res) {
+      console.log(res)
+      let arr = that.data.recommendList.concat(res.data)
+      that.setData({
+        recommendList: arr,
+        loadingMore: false
+      })
+    })
     console.log(e)
   },
   scroll: function (e) {
@@ -110,6 +123,7 @@ Page({
   getRecommendList() {
     let that = this;
     getNewsList().then(function(res) {
+      console.log(res)
       that.setData({
         recommendList: res.data,
         loading: false

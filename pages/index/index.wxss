@@ -69,6 +69,9 @@ swiper {
   background-color: #fff;
   margin-top: 8px;
 }
+.weui-media-box:before{
+  border-top: 0px;
+}
 swiper-item {
   box-sizing: border-box;
   padding-top: 86px;
@@ -86,4 +89,7 @@ swiper-item {
   top: -60px;
   left: 17.5%;
   z-index: 1000;
+}
+.weui-cell:before {
+  border-top: 0px;
 }

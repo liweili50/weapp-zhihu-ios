@@ -1,3 +1,149 @@
 <view class="page">
-更多
+  <button wx:if="{{canIUse&&userInfo===null}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+  <view class="weui-panel__bd weui-panel__user">
+    <view class="weui-media-box weui-media-box_small-appmsg">
+      <view class="weui-cells weui-cells_in-small-appmsg">
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd weui-cell__userAvatar">
+            <image src="{{userInfo.avatarUrl}}"></image>
+          </view>
+          <view class="weui-cell__bd weui-cell_primary weui-cell_user">
+            <view>{{userInfo.nickName}}</view>
+            <view>查看个人主页或编辑简介</view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+
+  <view class="weui-panel__bd weui-panel__content">
+    <view class="weui-media-box weui-media-box_small-appmsg">
+      <view class="weui-cells weui-cells_in-small-appmsg">
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="../../images/icon.png" />
+          </view>
+          <view class="weui-cell__bd weui-cell_primary">
+            <view>我的创作</view>
+          </view>
+          <view style="display: inline-block;vertical-align:middle; font-size: 14px;">2个草稿</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="../../images/icon.png" />
+          </view>
+          <view class="weui-cell__bd weui-cell_primary">
+            <view>我的收藏</view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="../../images/icon.png" />
+          </view>
+          <view class="weui-cell__bd weui-cell_primary">
+            <view>我的关注</view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="../../images/icon.png" />
+          </view>
+          <view class="weui-cell__bd weui-cell_primary">
+            <view>我的邀请回答</view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view class="weui-panel__bd weui-panel__content">
+    <view class="weui-media-box weui-media-box_small-appmsg">
+      <view class="weui-cells weui-cells_in-small-appmsg">
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="../../images/icon.png" />
+          </view>
+          <view class="weui-cell__bd weui-cell_primary">
+            <view>已购内容</view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="../../images/icon.png" />
+          </view>
+          <view class="weui-cell__bd weui-cell_primary">
+            <view>我的书架</view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="../../images/icon.png" />
+          </view>
+          <view class="weui-cell__bd weui-cell_primary">
+            <view>我的付费咨询</view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="../../images/icon.png" />
+          </view>
+          <view class="weui-cell__bd weui-cell_primary">
+            <view>我的余额</view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view class="weui-panel__bd weui-panel__content">
+    <view class="weui-media-box weui-media-box_small-appmsg">
+      <view class="weui-cells weui-cells_in-small-appmsg">
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="../../images/icon.png" />
+          </view>
+          <view class="weui-cell__bd weui-cell_primary">
+            <view>我的创作</view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="../../images/icon.png" />
+          </view>
+          <view class="weui-cell__bd weui-cell_primary">
+            <view>我的收藏</view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <view class="weui-cell weui-cell_access">
+          <view class="weui-cell__hd">
+            <image src="../../images/icon.png" />
+          </view>
+          <view class="weui-cell__bd weui-cell_primary">
+            <view>夜间模式</view>
+          </view>
+          <view class="weui-cell__ft">
+            <switch checked />
+          </view>
+        </view>
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="../../images/icon.png" />
+          </view>
+          <view class="weui-cell__bd weui-cell_primary">
+            <view>我的邀请回答</view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+      </view>
+    </view>
+  </view>
 </view>

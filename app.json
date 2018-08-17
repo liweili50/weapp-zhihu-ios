@@ -11,7 +11,8 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "知乎",
     "navigationBarTextStyle":"black",
-    "onReachBottomDistance": true
+    "onReachBottomDistance": true,
+    "backgroundColor": "#EBEBEB"
   },
   "tabBar": {
     "selectedColor": "#3683F4",
